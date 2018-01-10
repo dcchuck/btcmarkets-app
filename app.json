@@ -1,0 +1,20 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "OpenfinPOC",
+        "description": "OpenFin POC",
+        "url": "http://localhost:3000",
+        "uuid": "OpenfinPOC-o9hgcb65vbm08zx44s6a2lnmi",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "stable"
+    },
+    "shortcut": {
+        "company": "BTC Market",
+        "description": "Openfin POC",
+        "name": "BTC Market",
+        "icon": "http://localhost:3000/img/bitcoin_coin_ZSW_icon.ico"
+    }
+}

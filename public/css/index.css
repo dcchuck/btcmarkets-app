@@ -1,0 +1,68 @@
+#ticker-table th{
+    text-align: center;
+}
+
+#ticker-table td{
+    text-align: center;
+}
+
+#order-book-table {
+    width: 100%;
+    float: left;
+    font-size: xx-small;
+}
+
+#order-book-table th {
+    text-align: center;
+}
+
+#order-book-table td {
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px; 
+}
+
+#trades {
+    width: 80%;
+    margin: auto;
+    list-style: none;
+}
+
+#trades li {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+#header {
+    text-align: center;
+}
+
+#nav {
+    text-align: center;
+}
+
+.separator {
+    height: 80%;
+    width: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#logo {
+    margin-top: 10px;
+}
+
+.nav-item {
+    display: inline-block;
+    width: 40%;
+}
+
+.divider {
+    background-color: blueviolet;
+    height: 2px;
+}
