@@ -81,6 +81,35 @@ function processBookMessage(parsedMessage) {
     }
 }
 
+// Drag out Order Book
+
+let orderBookWindow = window;
+
+let orderBookChildWindow = new fin.desktop.Window({
+    name: 'orderBookChild',
+    url: 'orderbook.html',
+    autoShow: false
+});
+
+const orderBookHeadline = document.getElementById('order-book-headline');
+orderBookColumn = document.getElementById('order-book-column');
+
+orderBookHeadline.addEventListener('dragend', ()=> {
+    orderBookColumn.style.display = 'none';
+    orderBookChildWindow.show();
+    orderBookWindow = orderBookChildWindow.nativeWindow;
+}, false);
+
+orderBookChildWindow.addEventListener('closed', () => {
+    orderBookColumn.style.display = '';
+    orderBookWindow = window;
+    orderBookChildWindow = new fin.desktop.Window({
+        name: 'orderBookChild',
+        url: 'orderbook.html',
+        autoShow: false
+    });
+})
+
 function updateBook(data) {
     let item = {
         PRICE: data[0],
@@ -110,7 +139,7 @@ function updateBook(data) {
     orderBook.sort((a,b) => {
         return a.PRICE < b.PRICE ? -1 : 1;
     })
-    let orderBookTable = document.getElementById('order-book-table');
+    let orderBookTable = orderBookWindow.document.getElementById('order-book-table');
     for (let i = orderBookTable.rows.length; i > 1; i--) {
         orderBookTable.deleteRow(i - 1);
     }
@@ -145,12 +174,53 @@ tradesWB.onmessage = (msg) => {
     let messageData = JSON.parse(msg.data)
     if (messageData[1] === "te") {
         if (messageData[2][2] > 0) {
+
+            //Add Trades to the List
+
             let newTrade = document.createElement('li');
             newTrade.innerText = `Trade Alert! ${messageData[2][2]} BTC Sold @ ${messageData[2][3]}`
             if (tradeTable.children.length === 5) {
                 tradeTable.removeChild(tradeTable.lastChild);
             }
             tradeTable.insertBefore(newTrade, tradeTable.childNodes[0]);
+
+            // Show an OpenFin Notification Instead
+
+            // let tradeNotification = new fin.desktop.Notification({
+            //     url: 'notification.html',
+            //     message: `Trade Alert! ${messageData[2][2]} BTC Sold @ ${messageData[2][3]}`
+            // })
+
         }
+    }
+}
+
+// Add a close button
+
+const closeButton = document.getElementById('close');
+
+closeButton.onclick = () => {
+    fin.desktop.Application.getCurrent().close();
+}
+
+
+
+
+//Open the research page in a 2nd OpenFin Window
+
+const researchPageLink = document.getElementById('research-page');
+
+let researchPageWindow;
+
+researchPageLink.onclick = (e) => {
+    e.preventDefault();
+    if (typeof fin !== 'undefined') {
+        researchPageWindow = new fin.desktop.Window({
+            name: 'researchPage',
+            url: 'research.html',
+            autoShow: true
+        })
+    } else {
+        window.location.href = 'research.html';
     }
 }

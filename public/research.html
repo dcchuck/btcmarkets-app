@@ -19,33 +19,43 @@
             <div class='article-logo'>
                 <img src='img/New_Bloomberg_Logo.svg' height='20px'>
             </div>
-            <a href='https://www.bloomberg.com/news/articles/2018-01-09/bitcoin-s-43-arbitrage-trade-is-a-lot-tougher-than-it-looks'>Bitcoin's 43% Arbitrage Trade Is a Lot Tougher Than It Looks</a>
+            <a class='article' href='https://www.bloomberg.com/news/articles/2018-01-09/bitcoin-s-43-arbitrage-trade-is-a-lot-tougher-than-it-looks'>Bitcoin's 43% Arbitrage Trade Is a Lot Tougher Than It Looks</a>
         </li>
         <li>
             <div class="article-logo">
                 <img src='img/CNBC_logo.png' height='20px'>
             </div>
-            <a href='https://www.cnbc.com/2018/01/09/jamie-dimon-says-he-regrets-calling-bitcoin-a-fraud.html'>Jamie Dimon says he regrets calling bitcoin a fraud and believes in the technology behind it</a>
+            <a class='article' href='https://www.cnbc.com/2018/01/09/jamie-dimon-says-he-regrets-calling-bitcoin-a-fraud.html'>Jamie Dimon says he regrets calling bitcoin a fraud and believes in the technology behind it</a>
         </li>
         <li>
             <div class="article-logo">
                 <img src='img/New_Bloomberg_Logo.svg' height='20px'>
             </div>
-            <a href='https://www.bloomberg.com/news/articles/2018-01-09/spread-better-ig-group-among-biggest-holders-of-bitcoin-futures'>Spread Bettor IG Among Biggest Holders of Bitcoin Futures</a>
+            <a class='article' href='https://www.bloomberg.com/news/articles/2018-01-09/spread-better-ig-group-among-biggest-holders-of-bitcoin-futures'>Spread Bettor IG Among Biggest Holders of Bitcoin Futures</a>
         </li>
         <li>
             <div class="article-logo">
                 <img src='img/bitcoincom.png' height='20px'>
             </div>
-            <a href='https://news.bitcoin.com/microsoft-has-stopped-accepting-bitcoin-deposits/'>Microsoft Has Stopped Accepting Bitcoin Deposits</a>
+            <aa class='article' href='https://news.bitcoin.com/microsoft-has-stopped-accepting-bitcoin-deposits/'>Microsoft Has Stopped Accepting Bitcoin Deposits</a>
         </li>
         <li>
             <div class="article-logo">
                 <img src='img/New_Bloomberg_Logo.svg' height='20px'>
             </div>
-            <a href='https://www.bloomberg.com/news/articles/2018-01-09/novogratz-starts-merchant-bank-envisioning-goldman-of-crypto'>Mike Novogratz Wants to Build the Goldman of Crypto and List It in Canada</a>
+            <a class='article' href='https://www.bloomberg.com/news/articles/2018-01-09/novogratz-starts-merchant-bank-envisioning-goldman-of-crypto'>Mike Novogratz Wants to Build the Goldman of Crypto and List It in Canada</a>
         </li>
     </ul>
+    <script>
+        const links = document.getElementsByClassName('article');
+        for (let i = 0; i < links.length; i++) {
+            let link = links[i];
+            link.onclick = (e) => {
+                e.preventDefault();
+                fin.desktop.System.openUrlWithBrowser(e.target.href);
+            }
+        }
+    </script>
 </body>
 
 </html>

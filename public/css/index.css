@@ -39,7 +39,7 @@ h4 {
     margin-top: 10px;
 }
 
-#header {
+h1 {
     text-align: center;
 }
 
@@ -66,4 +66,12 @@ h4 {
 .divider {
     background-color: blueviolet;
     height: 2px;
+}
+
+#header {
+    -webkit-app-region: drag;
+}
+
+#close:hover {
+    cursor: pointer;
 }

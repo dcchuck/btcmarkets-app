@@ -23,12 +23,13 @@
             </div>
             <div class='column column-25' id='nav'>
                     <div class='nav-item'>
-                        <a href='research.html'>Research</a>
+                        <a href='research.html' id='research-page'>Research</a>
                     </div>
                     <div class='separator'></div>
                     <div class='nav-item'>
                         <a href='https://www.github.com'>Source</a>
                     </div>
+                    <span id='close'>X</span>
             </div>
         </div>
         <div class='row divider'></div>
@@ -73,8 +74,8 @@
         </div>
         <div class='row divider'></div>
         <div class='row'>
-            <div class='column'>
-                <h4>Order Book</h4>
+            <div class='column' id='order-book-column'>
+                <h4 draggable="true" id='order-book-headline'>Order Book</h4>
                 <table id='order-book-table'>
                     <tr>
                         <th>

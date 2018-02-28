@@ -4,7 +4,7 @@
         "name": "OpenfinPOC",
         "description": "OpenFin POC",
         "url": "http://localhost:3000",
-        "uuid": "OpenfinPOC-rnz6p529rhno9jq8ev9wtrzfr",
+        "uuid": "OpenfinPOC-o9hgcb65vbm08zx44s6a2lnmi",
         "autoShow": true
     },
     "runtime": {
@@ -12,8 +12,9 @@
         "version": "stable"
     },
     "shortcut": {
-        "company": "OpenFin",
+        "company": "BTC Market",
         "description": "Openfin POC",
-        "name": "Openfin POC"
+        "name": "BTC Market",
+        "icon": "http://localhost:3000/img/bitcoin_coin_ZSW_icon.ico"
     }
 }

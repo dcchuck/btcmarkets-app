@@ -1,0 +1,29 @@
+openfin --launch --url https://www.wikipedia.org
+
+https://btcmarketinfo.herokuapp.com/
+
+openfin --launch --url http://localhost:3000
+
+// customize shortcut
+
+openfin --launch --config shortcutapp.json
+
+const mainWindow = fin.desktop.Window.getCurrent();
+mainWindow.updateOptions({ frame: false });
+
+const headline = document.getElementById('header')
+headline.style.webkitAppRegion = 'drag'
+
+fin.desktop.Application.getCurrent().close();
+
+// Add the close button
+
+// Launch from local.json
+
+// Create 2nd Window from Research
+
+// Make research links open in the browser
+
+// Turn trades into notifications
+
+// Create tearout orderbook
