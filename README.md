@@ -1,3 +1,9 @@
+# About
+
+This is a sample app I put together as part of some multi-window OpenFin work. That didn't quite make it here, but this is all vanilla js/html. As of this commit, the API connectivity is still good.
+
+![App Screenshot](./screenshot.png)
+
 ### Exchanges
 
 BITFINEX

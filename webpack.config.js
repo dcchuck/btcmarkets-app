@@ -13,6 +13,10 @@ module.exports = {
 		port: 3000
 	},
 	plugins: [
-		new CopyWebpackPlugin(['static'])
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: 'static' }
+			]
+		})
 	]
 }
